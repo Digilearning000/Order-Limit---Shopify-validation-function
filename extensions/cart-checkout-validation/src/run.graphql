@@ -2,6 +2,16 @@ query RunInput {
   cart {
     lines {
       quantity
+      merchandise {
+        ... on ProductVariant {
+          product {
+            handle
+            max_items: metafield(key: "custom", namespace: "max_items") {
+              value
+            }
+          }
+        }
+      }
     }
   }
 }
