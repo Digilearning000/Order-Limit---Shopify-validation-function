@@ -15,7 +15,7 @@ export function run(input) {
   input.cart.lines.forEach((lineItem) => {
     const { quantity, merchandise } = lineItem;
 
-    const max = Number.parseInt(merchandise?.product?.max_items.value);
+    const max = Number.parseInt(merchandise?.product?.max_orders.value);
     if (max && quantity > max) {
       errors.push({
         message: `Quantity of ${quantity} exceeds max of ${max}`,

@@ -6,7 +6,7 @@ query RunInput {
         ... on ProductVariant {
           product {
             handle
-            max_items: metafield(key: "custom", namespace: "max_items") {
+            max_orders: metafield(key: "custom", namespace: "max_items") {
               value
             }
           }
